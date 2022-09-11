@@ -17,21 +17,21 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
                 <div data-testid="custom-element">Custom HTML element</div>
                 <form>
                     <div>
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Name </label>
                         <input
                             type="text"
                             id="name"
-                            placeholder="Fullname"
+                            placeholder="Full Name"
                             value="John Paul"
                             onChange={() => {}}
                         />
                     </div>
                     <div>
-                        <label htmlFor="bio">Bio</label>
+                        <label htmlFor="bio">Bio </label>
                         <textarea id="bio" />
                     </div>
                     <div>
-                        <label htmlFor="job-location">Job location</label>
+                        <label htmlFor="job-location">Job location </label>
                         <select id="job-location">
                             <option value="">Select a country</option>
                             <option value="US">United States</option>
