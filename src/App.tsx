@@ -1,4 +1,5 @@
 import "./App.css";
+import Application from "./components/application/Application";
 import Greet from "./components/greet/Greet";
 
 function App() {
@@ -9,6 +10,9 @@ function App() {
             </h1>
             <hr />
             <Greet name="Monica" />
+            <br />
+            <hr />
+            <Application />
             <br />
             <hr />
         </div>
