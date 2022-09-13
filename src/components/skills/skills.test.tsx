@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { logRoles, render, screen } from "@testing-library/react";
 import { Skills } from "./Skills";
 
 describe("Skills Component", () => {
@@ -33,6 +33,36 @@ describe("Skills Component", () => {
 
     it("should render Start Learning button after 3sec.", async () => {
         render(<Skills skills={skills} />);
+        const startLearningButton = await screen.findByRole(
+            "button",
+            {
+                name: /start learning/i,
+            },
+            { timeout: 4000 }
+        );
+        expect(startLearningButton).toBeInTheDocument();
+    });
+
+    /** screen.debug(); Remove when not when not needed */
+    it("debugging Start Learning button after 3sec.", async () => {
+        render(<Skills skills={skills} />);
+
+        //screen.debug(); // View component tree before timeout
+        const startLearningButton = await screen.findByRole(
+            "button",
+            {
+                name: /start learning/i,
+            },
+            { timeout: 4000 }
+        );
+        //screen.debug(); // View component tree before timeout
+        expect(startLearningButton).toBeInTheDocument();
+    });
+
+    /** List Nodes by Role: logRoles(); */
+    it.only("printing list of tree Node Roles Start Learning button", async () => {
+        const view = render(<Skills skills={skills} />);
+        logRoles(view.container);
         const startLearningButton = await screen.findByRole(
             "button",
             {
