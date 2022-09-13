@@ -1,6 +1,7 @@
 import "./App.css";
 import Application from "./components/application/Application";
 import Greet from "./components/greet/Greet";
+import { Skills } from "./components/skills/Skills";
 
 function App() {
     return (
@@ -13,6 +14,9 @@ function App() {
             <br />
             <hr />
             <Application />
+            <br />
+            <hr />
+            <Skills skills={["ts", "js", "css", "jsx", "tsx", "HTML"]} />
             <br />
             <hr />
         </div>
