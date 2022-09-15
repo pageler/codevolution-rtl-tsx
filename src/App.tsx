@@ -2,7 +2,9 @@ import "./App.css";
 import Application from "./components/application/Application";
 import Counter from "./components/counter/Counter";
 import Greet from "./components/greet/Greet";
+import MuiMode from "./components/mui/MuiMode";
 import { Skills } from "./components/skills/Skills";
+import AppProviders from "./providers/AppProviders";
 
 function App() {
     return (
@@ -21,6 +23,11 @@ function App() {
             <br />
             <hr />
             <Counter />
+            <br />
+            <hr />
+            <AppProviders>
+                <MuiMode />
+            </AppProviders>
             <br />
             <hr />
         </div>
