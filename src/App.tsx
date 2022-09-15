@@ -1,5 +1,6 @@
 import "./App.css";
 import Application from "./components/application/Application";
+import Counter from "./components/counter/Counter";
 import Greet from "./components/greet/Greet";
 import { Skills } from "./components/skills/Skills";
 
@@ -17,6 +18,9 @@ function App() {
             <br />
             <hr />
             <Skills skills={["ts", "js", "css", "jsx", "tsx", "HTML"]} />
+            <br />
+            <hr />
+            <Counter />
             <br />
             <hr />
         </div>
